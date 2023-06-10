@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "bicagu123@gmail.com",
+                "Name": "bichu136"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "A widget to take over the world!",
+        "Icon": "battery",
+        "Id": "com.asuna.yuuki.helloworld",
+        "Name": "Hello World",
+        "Version": "1",
+        "Website": "https://bichu136.github.com/"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
+}
