@@ -12,9 +12,10 @@
         "Id": "com.asuna.yuuki.helloworld",
         "Name": "Hello World",
         "Version": "1",
-        "Website": "https://bichu136.github.com/"
+        "Website": "https://bichu136.github.com/",
+        "ServiceTypes":["Plasma/Applet"]
     },
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-MainScript": "ui/main2.qml",
     "KPackageStructure": "Plasma/Applet"
 }
