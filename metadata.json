@@ -16,6 +16,6 @@
         "ServiceTypes":["Plasma/Applet"]
     },
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main2.qml",
+    "X-Plasma-MainScript": "ui/main.qml",
     "KPackageStructure": "Plasma/Applet"
 }

@@ -4,7 +4,7 @@ import QtQuick.Controls 2.0 as Controls
 import QtQuick.Window 2.0
 import QtGraphicalEffects 1.0
 import QtMultimedia 5.4
-
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -59,8 +59,22 @@ Item{
        
     }
     Component {
-        id: menuRepresentation
-        MenuRepresentation {}
+	id: menuRepresentation;
+
+    PlasmaExtras.SearchField {
+        id: searchField
+
+        anchors.bottom: mainRow.bottom
+        anchors.left: parent.left
+        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : PlasmaCore.Units.smallSpacing)
+
+        readonly property real defaultWidth: PlasmaCore.Units.gridUnit * 14
+        width: (runnerColumnsRepeater.count !== 0 ? runnerColumnsRepeater.itemAt(0).width
+                                                  : (rootList.visible ? rootList.width : defaultWidth))
+
+        focus: !Kirigami.InputMethod.willShowOnActive
+
+           }
     }
     Plasmoid.fullRepresentation: menuRepresentation  // Plasmoid.prefferedRepresentation: compactRepresentation
 }
