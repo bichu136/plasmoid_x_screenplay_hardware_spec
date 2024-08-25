@@ -58,8 +58,10 @@ Item{
 
        
     }
-  Plasmoid.fullRepresentation: Rectangle{
-	  color:"blue";
-  }
-  // Plasmoid.prefferedRepresentation: compactRepresentation
+    Component {
+        id: menuRepresentation
+        MenuRepresentation {}
+    }
+    Plasmoid.fullRepresentation: menuRepresentation  // Plasmoid.prefferedRepresentation: compactRepresentation
 }
+
